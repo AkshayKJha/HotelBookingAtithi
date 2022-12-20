@@ -1,0 +1,45 @@
+<!-- <%- include('partials/header') %> -->
+
+<div class="container">
+    <form action="/properties/<%=property._id %>" method="POST">
+        <div class="form-group col-md-2">
+            <label>Title</label>
+            <input type="text" id="title" name="title" value="<%= property.title %>" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Street</label>
+            <input type="text" id="street" name="street" value="<%= property.street %>" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>City</label>
+            <input type="text" id="city" name="city" value="<%= property.city %>" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>State</label>
+            <input type="text" id="state" name="state" value="<%= property.state %>" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Country</label>
+            <input type="text" id="country" name="country" value="<%= property.country %>" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Image name</label>
+            <input type="text" id="image" name="image" value="<%= property.thumbnails %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-2">
+            <label>Desc</label>
+            <textarea id="desc" name="desc" class="form-control"><%= property.description %>
+    </textarea>
+        </div>
+        <div class="form-group col-md-2">
+            <button type="submit" id="edit" class="btn btn-outline-dark">Edit Property</button>
+        </div>
+
+    </form>
+
+
+</div>
+
+
+<!-- <%- include('partials/footer') %> -->

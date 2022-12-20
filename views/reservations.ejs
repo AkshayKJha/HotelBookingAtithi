@@ -1,0 +1,50 @@
+<!-- <%- include('partials/header') %> -->
+
+
+<div class="container">
+
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Atithi Application</h1>
+      <p class="col-md-8 fs-4">List of reservations</p>
+      <a href="/reservations/new" class="btn btn-primary btn-lg" type="button">Book Reservation</a>
+      <a href="/" class="btn btn-primary btn-lg" type="button">Home Page</a>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+
+    <% reservations.forEach(function(reservation){ %>
+
+      <div class="card" style="width: 18rem;">
+        <img src="images/<%= reservation.property_photo %>" class="thumbnail" alt="..."
+          style="width:200px; height:200px">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= reservation.username %>
+          </h5>
+          <p class="card-text">
+            <%= reservation.property_name %>
+          </p>
+          <p class="card-text">
+            Start Date : <%= reservation.start_date %>
+          </p>
+          <p class="card-text">
+            End Date : <%= reservation.end_date %>
+          </p>
+          <a href="/reservations/<%= reservation._id %><%= extra_string %>" class="btn btn-primary">Show details</a>
+        </div>
+      </div>
+
+      <% }); %>
+
+
+  </div>
+
+  <!-- <%- include('partials/footer') %> -->
+
+
+
+</div>

@@ -1,0 +1,34 @@
+<!-- <%- include('partials/header') %> -->
+
+<div class="container-fluid">
+
+    <h1>Reservation details</h1>
+
+    <p><img src="/images/<%= reservation.property_photo %>" /></p>
+
+    <p>Username: <%= reservation.username %>
+    </p>
+
+    <p>Property Name: <%= reservation.property_name %>
+    </p>
+
+    <p>Start Date: <%= reservation.start_date %>
+    </p>
+
+    <p>End Time: <%= reservation.end_date %>
+    </p>
+
+    <form action="/reservations/<%= reservation._id %>?_method=DELETE" method="POST">
+        <button type="submit" class="btn btn-danger"> Delete Reservation</button>
+    </form>
+
+
+    <p>
+        <a href="/reservations<%= extra_string %>">Back to list</a>
+
+    </p>
+</div>
+
+
+
+<!-- <%- include('partials/footer') %>   -->

@@ -1,0 +1,36 @@
+<!-- <%- include('partials/header') %> -->
+
+<div class="container">
+    <form action="/reservations" method="POST">
+        <div class="form-group col-md-2">
+            <label>Username</label>
+            <input type="text" id="username" name="username" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Property Name</label>
+            <input type="text" id="propertyName" name="propertyName" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Property Photo</label>
+            <input type="text" id="propertyPhoto" name="propertyPhoto" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Start Date</label>
+            <input type="text" id="startDate" name="startDate" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>End Date</label>
+            <input type="text" id="endDate" name="endDate" class="form-control">
+        </div>
+
+        <div class="form-group col-md-2">
+            <button type="submit" id="add" class="btn btn-outline-dark">Add Reservation</button>
+        </div>
+
+    </form>
+
+
+</div>
+
+
+<!-- <%- include('partials/footer') %> -->

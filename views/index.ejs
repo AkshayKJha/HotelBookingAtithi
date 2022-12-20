@@ -1,0 +1,35 @@
+<!-- <%- include('partials/header') %> -->
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold">Atithi Application</h1>
+        <br>
+        <a href="/properties" class="btn btn-primary btn-lg" style="margin: 25px;" type="button">Show Properties</a>
+        <a href="/reservations" class="btn btn-primary btn-lg" style="margin: 25px;" type="button">Show Reservations</a>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row  text-center">
+
+        <h3 class="display-7">Show Reservations by users</h3>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <ul class="list-group">
+                <% users.forEach(function(user){ %>
+                    <a href="/reservations?userid=<%= user.userid%>">
+                        <li class="list-group-item">
+                            <%= user.first_name %>
+                                <%= user.last_name %>
+                        </li>
+                    </a>
+                    <% }); %>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+<%- include('partials/footer') %>

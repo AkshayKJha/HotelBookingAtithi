@@ -1,0 +1,37 @@
+<!-- <%- include('partials/header') %> -->
+
+<div class="container-fluid">
+
+    <h1>Property details</h1>
+
+    <p><img src="/images/<%= property.thumbnails %>" /></p>
+    <p>Title: <%= property.title %>
+    </p>
+
+    <p>Description: <%= property.description %>
+    </p>
+    <p>Street: <%= property.street %>
+    </p>
+    <p>City: <%= property.city %>
+    </p>
+    <p>State: <%= property.state %>
+    </p>
+    <p>Country: <%= property.country %>
+    </p>
+
+    <a class="btn btn-warning" href=" /properties/<%=property._id %>/edit" role="button"> Edit Properties</a>
+
+    <form action="/properties/<%= property._id %>?_method=DELETE" method="POST">
+        <button type="submit" class="btn btn-danger"> Delete Properties</button>
+    </form>
+
+
+    <p>
+        <a href="/properties">Back to list</a>
+
+    </p>
+</div>
+
+
+
+<!-- <%- include('partials/footer') %> -->
